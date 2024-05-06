@@ -1,0 +1,126 @@
+<mvc:View xmlns:smartvariants="sap.ui.comp.smartvariants" xmlns:filterbar="sap.ui.comp.filterbar" xmlns:f="sap.f" controllerName="invoicesummary.controller.invoicesummary"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns="sap.m">
+	<Page id="page" title="{i18n>title}">
+		<content>
+		<!-- <f:DynamicPageTitle>
+		<f:heading>
+		</f:heading>
+		</f:DynamicPageTitle> -->
+		<f:DynamicPageHeader>
+		<VBox class="box">
+		<filterbar:FilterBar useToolbar="false" id="f1" >
+		<!-- <Button text="demo" id="b1"></Button> -->
+		<filterbar:filterGroupItems>
+		<filterbar:FilterGroupItem name="Name" label="Name" groupName="Group1" visibleInFilterBar="true">
+		<filterbar:control>
+		  <MultiComboBox 
+		  name="Name"
+		  ></MultiComboBox>
+		</filterbar:control>
+		</filterbar:FilterGroupItem>
+		<filterbar:FilterGroupItem name="demo" label="demo" groupName="Group2" visibleInFilterBar="true">
+		<filterbar:control>
+		  <MultiComboBox 
+		  name="demo"
+		  ></MultiComboBox>
+		</filterbar:control>
+		</filterbar:FilterGroupItem>
+		</filterbar:filterGroupItems>
+		</filterbar:FilterBar>
+		
+		</VBox>
+		</f:DynamicPageHeader>
+		<ScrollContainer horizontal="true" vertical="true" height="100%">
+			<Table class="tableCLass" width="250%" id="idProductsTable" inset="true" items="{
+			path: '/Invoice'
+		}">
+
+
+
+				<columns >
+					<Column width="12em" minScreenWidth="Desktop" styleClass="col">
+						<Text text="Invoice No"  />
+					</Column>
+					<Column width="12em" minScreenWidth="Desktop">
+						<Text text="Vendor Name" />
+					</Column>
+					<Column width="12em" minScreenWidth="Desktop">
+						<Text text="Vendor No" />
+					</Column>
+					<Column width="12em" minScreenWidth="Desktop">
+						<Text text="Document Type" />
+					</Column>
+					<Column width="12em" minScreenWidth="Desktop">
+						<Text text="Overdue Flag" />
+					</Column>
+					<Column width="12em" minScreenWidth="Desktop">
+						<Text text="Invoice Status" />
+					</Column>
+					<Column width="12em" minScreenWidth="Desktop">
+						<Text text="Amount" />
+					</Column>
+					<Column width="12em" minScreenWidth="Desktop">
+						<Text text="Invoice Date" />
+					</Column>
+					<Column width="12em" minScreenWidth="Desktop">
+						<Text text="Due Date" />
+					</Column>
+					<Column width="12em" minScreenWidth="Desktop">
+						<Text text="Payment Terms" />
+					</Column>
+					<Column width="12em" minScreenWidth="Desktop">
+						<Text text="Days to Due" />
+					</Column>
+					<Column width="12em" minScreenWidth="Desktop">
+						<Text text="Ref.Po.No." />
+					</Column>
+					<Column width="12em" minScreenWidth="Desktop">
+						<Text text="Comp Code" />
+					</Column>
+					<Column width="12em" minScreenWidth="Desktop">
+						<Text text="Ap Processor" />
+					</Column>
+					<Column width="12em" minScreenWidth="Desktop">
+						<Text text="Approvers" />
+					</Column>
+					<Column width="12em" minScreenWidth="Desktop">
+						<Text text="Start Date" />
+					</Column>
+					<Column width="12em" minScreenWidth="Desktop">
+						<Text text="End Date" />
+					</Column>
+					<Column width="12em" minScreenWidth="Desktop">
+						<Text text="Process Duration" />
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem vAlign="Middle">
+						<cells>
+							<ObjectIdentifier  title="{Invoice_No}" />
+							<ObjectIdentifier title="{Vendor_name}" />
+							<ObjectIdentifier title="{Vendor_No}" />
+							<ObjectIdentifier title="{Document_Type}" />
+							<ObjectStatus title="{Overdue_Flag}" icon="sap-icon://flag"  />
+							<ObjectIdentifier title="{Invoice_Status}" />
+							<ObjectIdentifier title="{Amount}" />
+							<ObjectIdentifier title="{Invoice_Date}" />
+							<ObjectIdentifier title="{Due_Date}" />
+							<ObjectIdentifier title="{Payment_Terms}" />
+							<ObjectIdentifier title="{Days_to_Due}" />
+							<ObjectIdentifier title="{Ref_Po_No}" />
+							<ObjectIdentifier title="{Comp_Code}" />
+							<ObjectIdentifier title="{Ap_Processor}" />
+							<ObjectIdentifier title="{Approvers}" />
+							<ObjectIdentifier title="{Start_Date}" />
+							<ObjectIdentifier title="{End_Date}" />
+							<ObjectIdentifier title="{Process_Duration}" />
+
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+			</ScrollContainer>
+		</content>
+	</Page>
+</mvc:View>
